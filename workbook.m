@@ -22,7 +22,8 @@ disp("The correlation between hash rate and the USD price: "), disp(corr(hash, p
 disp("The correlation between hash rate and the USD revenue per 1 TH/s: "), disp(corr(hash, usd_rev));
 
 % compute the trend line for the last 365 days
-x=linspace(1,365, 365);
+len=length(usd_rev);
+x=linspace(1,len, len);
 b=polyfit(transpose(x),usd_rev,1);
 trend=polyval(b, transpose(x));
 
