@@ -16,3 +16,5 @@ octave:1> workbook
 
 The expected data format is price and the hashrate, one numerical value per line in files called `price.csv` and `hashrate.csv`.
 The expected length of the data is 365 lines.
+
+The workbook requires the `financial` package to be installed and loaded.
