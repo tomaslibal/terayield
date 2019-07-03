@@ -5,14 +5,13 @@
 pkg load financial
 
 % reads historical market price (in USD) from api.blockchain.info/charts/market-price?format=csv
-% 27 November 2016 - 26 November 2017
 price=csvread("./price.csv");
 % reads the historical hash rate (in TH/s) from api.blockchain.info/charts/hash-rate?format=csv
 hash=csvread("./hashrate.csv");
 
 % BTC revenue per 1 TH/s
 % assumptions:
-% 144 blocks in a day, no fees, 12.5 BTC block reward
+% 144 blocks in a day, no fees, 12.5 BTC block reward (12.5 * 144 blocks = 1800 BTC daily issuance)
 btc_rev = 1 ./ hash .* 1800;
 
 % USD revenue per 1 TH/s
