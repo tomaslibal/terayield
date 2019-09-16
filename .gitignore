@@ -1,2 +1,4 @@
 *.csv
 *.png
+octave-workspace
+.ipynb_checkpoints
